@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16;border-radius:12px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.15)" />
+      <stop offset="100%" stop-color="rgba(129, 140, 248, 0.05)" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Animated Circuit Flow -->
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.75; transform: scale(1.08); }
+      }
+      @keyframes beamMove {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes floatOpposite {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(7px); }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .glow-node {
+        animation: pulseGlow 4s ease-in-out infinite alternate;
+      }
+      .beam-line {
+        stroke-dasharray: 60 140;
+        animation: beamMove 5s linear infinite;
+      }
+      .floating-pill {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+      .floating-pill-alt {
+        animation: floatOpposite 7s ease-in-out infinite;
+      }
+      .radar-arm {
+        transform-origin: 1050px 180px;
+        animation: radarSweep 8s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="360" fill="url(#bgGradient)" />
+
+  <!-- Digital Grid Pattern -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="0.75">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Cyber Light Orbs (Background layer) -->
+  <circle cx="150" cy="80" r="130" fill="#0284c7" opacity="0.18" filter="url(#glow)" class="glow-node" />
+  <circle cx="1060" cy="270" r="160" fill="#6366f1" opacity="0.22" filter="url(#glow)" class="glow-node" />
+  <circle cx="650" cy="180" r="180" fill="#a855f7" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Animated Target Radar Scan on Right Side (Background) -->
+  <g opacity="0.45">
+    <circle cx="1050" cy="180" r="110" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 6" />
+    <circle cx="1050" cy="180" r="75" fill="none" stroke="#818cf8" stroke-width="1" />
+    <circle cx="1050" cy="180" r="40" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="1050" cy="180" r="4" fill="#38bdf8" />
+    <line x1="1050" y1="180" x2="1160" y2="180" stroke="#38bdf8" stroke-width="2" class="radar-arm" opacity="0.8" />
+  </g>
+
+  <!-- Animated Connection Beams (Background) -->
+  <path d="M 50 310 L 250 310 L 330 250 L 520 250" fill="none" stroke="#38bdf8" stroke-width="2" class="beam-line" opacity="0.5" />
+  <path d="M 680 70 L 850 70 L 930 130 L 1150 130" fill="none" stroke="#818cf8" stroke-width="2" class="beam-line" opacity="0.5" />
+
+  <!-- Dynamic Status Pills (Positioned around borders so titles are clear in foreground) -->
+  <g class="floating-pill">
+    <rect x="70" y="38" width="220" height="32" rx="16" fill="url(#badgeGrad)" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="86" cy="54" r="5" fill="#22c55e" />
+    <text x="100" y="59" fill="#e0f2fe" font-size="12" font-weight="600" letter-spacing="0.5">AGENTIC EXPLOIT VALIDATION</text>
+  </g>
+
+  <g class="floating-pill-alt">
+    <rect x="910" y="42" width="220" height="32" rx="16" fill="url(#badgeGrad)" stroke="#818cf8" stroke-width="1" />
+    <circle cx="926" cy="58" r="5" fill="#38bdf8" />
+    <text x="940" y="63" fill="#e0e7ff" font-size="12" font-weight="600" letter-spacing="0.5">MULTI-AGENT RED TEAMING</text>
+  </g>
+
+  <g class="floating-pill">
+    <rect x="740" y="295" width="210" height="32" rx="16" fill="url(#badgeGrad)" stroke="#c084fc" stroke-width="1" />
+    <circle cx="756" cy="311" r="5" fill="#a855f7" />
+    <text x="770" y="316" fill="#f3e8ff" font-size="12" font-weight="600" letter-spacing="0.5">CONTINUOUS SECURITY GATES</text>
+  </g>
+
+  <!-- FOREGROUND: Main Title & Subtitles with Crisp Contrast -->
+  <!-- Top Tagline -->
+  <text x="70" y="125" fill="#38bdf8" font-size="15" font-weight="700" letter-spacing="2.5" opacity="0.95">
+    THE CURATED LANDSCAPE • SAAS &amp; OPEN SOURCE
+  </text>
+
+  <!-- Main Repository Heading -->
+  <text x="70" y="185" fill="url(#textGrad)" font-size="44" font-weight="800" letter-spacing="-0.5">
+    Awesome Autonomous Penetration Testing
+  </text>
+
+  <!-- Detailed Subtitle Description -->
+  <text x="70" y="228" fill="#94a3b8" font-size="17" font-weight="400">
+    Agentic Exploit Validation • Multi-Agent Red Teaming • Continuous Threat Exposure Management
+  </text>
+
+  <text x="70" y="260" fill="#64748b" font-size="14" font-weight="500">
+    Production-Safe Deterministic Exploitation • Self-Hosted LLM Security Frameworks • CI/CD Automated Gates
+  </text>
+
+  <!-- Left Accent Tech Strip -->
+  <rect x="0" y="0" width="6" height="360" fill="url(#textGrad)" />
+</svg>
