@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Penetration-Testing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Autonomous-Penetration-Testing?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Penetration-Testing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Autonomous-Penetration-Testing?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Penetration-Testing/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Autonomous-Penetration-Testing?style=flat-square&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Penetration-Testing/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Autonomous-Penetration-Testing?style=flat-square&color=red" alt="Open Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Penetration-Testing/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License" /></a>
@@ -66,7 +66,7 @@ This repository curates notable **SaaS platforms** and **open-source projects** 
 
 ## 💻 Open-Source GitHub Projects
 
-*Sorted in descending order by GitHub Star count.*
+*Sorted in descending order by GitHub Stars_Count.*
 
 - **[Strix](https://github.com/usestrix/strix)** [![GitHub Repo stars](https://img.shields.io/github/stars/usestrix/strix?style=social&color=white)](https://github.com/usestrix/strix/stargazers)  
   ⚡ **The leading open-source AI-native pentest framework** (Apache-2.0). Runs autonomous AI agents that act like real attackers—dynamically exploring target applications, probing for vulnerabilities across the OWASP Top 10, and **validating findings with working proof-of-concept exploits**. Multi-agent architecture separates tasks into reconnaissance, exploitation, and reporting, chaining individual flaws into multi-stage attack paths. Docker-based with easy self-hosting.
